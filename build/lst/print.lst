@@ -1,0 +1,233 @@
+ARM GAS  /var/folders/t8/16hdwfmd2fg_d3q6dgx6bpmw0000gn/T//cce3G323.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"print.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              	.Letext0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18 0000 60000000 		.4byte	0x60
+  19 0004 0400     		.2byte	0x4
+  20 0006 00000000 		.4byte	.Ldebug_abbrev0
+  21 000a 04       		.byte	0x4
+  22 000b 01       		.uleb128 0x1
+  23 000c DB000000 		.4byte	.LASF9
+  24 0010 0C       		.byte	0xc
+  25 0011 0D000000 		.4byte	.LASF10
+  26 0015 3D000000 		.4byte	.LASF11
+  27 0019 00000000 		.4byte	.Ldebug_line0
+  28 001d 02       		.uleb128 0x2
+  29 001e 01       		.byte	0x1
+  30 001f 06       		.byte	0x6
+  31 0020 A1000000 		.4byte	.LASF0
+  32 0024 02       		.uleb128 0x2
+  33 0025 01       		.byte	0x1
+  34 0026 08       		.byte	0x8
+  35 0027 C4000000 		.4byte	.LASF1
+  36 002b 02       		.uleb128 0x2
+  37 002c 02       		.byte	0x2
+  38 002d 05       		.byte	0x5
+  39 002e 97000000 		.4byte	.LASF2
+  40 0032 02       		.uleb128 0x2
+  41 0033 02       		.byte	0x2
+  42 0034 07       		.byte	0x7
+  43 0035 84000000 		.4byte	.LASF3
+  44 0039 02       		.uleb128 0x2
+  45 003a 04       		.byte	0x4
+  46 003b 05       		.byte	0x5
+  47 003c D2000000 		.4byte	.LASF4
+  48 0040 02       		.uleb128 0x2
+  49 0041 04       		.byte	0x4
+  50 0042 07       		.byte	0x7
+  51 0043 2B000000 		.4byte	.LASF5
+  52 0047 02       		.uleb128 0x2
+  53 0048 08       		.byte	0x8
+  54 0049 05       		.byte	0x5
+  55 004a C4010000 		.4byte	.LASF6
+  56 004e 02       		.uleb128 0x2
+  57 004f 08       		.byte	0x8
+ARM GAS  /var/folders/t8/16hdwfmd2fg_d3q6dgx6bpmw0000gn/T//cce3G323.s 			page 2
+
+
+  58 0050 07       		.byte	0x7
+  59 0051 AD000000 		.4byte	.LASF7
+  60 0055 03       		.uleb128 0x3
+  61 0056 04       		.byte	0x4
+  62 0057 05       		.byte	0x5
+  63 0058 696E7400 		.ascii	"int\000"
+  64 005c 02       		.uleb128 0x2
+  65 005d 04       		.byte	0x4
+  66 005e 07       		.byte	0x7
+  67 005f 00000000 		.4byte	.LASF8
+  68 0063 00       		.byte	0
+  69              		.section	.debug_abbrev,"",%progbits
+  70              	.Ldebug_abbrev0:
+  71 0000 01       		.uleb128 0x1
+  72 0001 11       		.uleb128 0x11
+  73 0002 01       		.byte	0x1
+  74 0003 25       		.uleb128 0x25
+  75 0004 0E       		.uleb128 0xe
+  76 0005 13       		.uleb128 0x13
+  77 0006 0B       		.uleb128 0xb
+  78 0007 03       		.uleb128 0x3
+  79 0008 0E       		.uleb128 0xe
+  80 0009 1B       		.uleb128 0x1b
+  81 000a 0E       		.uleb128 0xe
+  82 000b 10       		.uleb128 0x10
+  83 000c 17       		.uleb128 0x17
+  84 000d 00       		.byte	0
+  85 000e 00       		.byte	0
+  86 000f 02       		.uleb128 0x2
+  87 0010 24       		.uleb128 0x24
+  88 0011 00       		.byte	0
+  89 0012 0B       		.uleb128 0xb
+  90 0013 0B       		.uleb128 0xb
+  91 0014 3E       		.uleb128 0x3e
+  92 0015 0B       		.uleb128 0xb
+  93 0016 03       		.uleb128 0x3
+  94 0017 0E       		.uleb128 0xe
+  95 0018 00       		.byte	0
+  96 0019 00       		.byte	0
+  97 001a 03       		.uleb128 0x3
+  98 001b 24       		.uleb128 0x24
+  99 001c 00       		.byte	0
+ 100 001d 0B       		.uleb128 0xb
+ 101 001e 0B       		.uleb128 0xb
+ 102 001f 3E       		.uleb128 0x3e
+ 103 0020 0B       		.uleb128 0xb
+ 104 0021 03       		.uleb128 0x3
+ 105 0022 08       		.uleb128 0x8
+ 106 0023 00       		.byte	0
+ 107 0024 00       		.byte	0
+ 108 0025 00       		.byte	0
+ 109              		.section	.debug_aranges,"",%progbits
+ 110 0000 14000000 		.4byte	0x14
+ 111 0004 0200     		.2byte	0x2
+ 112 0006 00000000 		.4byte	.Ldebug_info0
+ 113 000a 04       		.byte	0x4
+ 114 000b 00       		.byte	0
+ARM GAS  /var/folders/t8/16hdwfmd2fg_d3q6dgx6bpmw0000gn/T//cce3G323.s 			page 3
+
+
+ 115 000c 0000     		.2byte	0
+ 116 000e 0000     		.2byte	0
+ 117 0010 00000000 		.4byte	0
+ 118 0014 00000000 		.4byte	0
+ 119              		.section	.debug_line,"",%progbits
+ 120              	.Ldebug_line0:
+ 121 0000 19000000 		.section	.debug_str,"MS",%progbits,1
+ 121      02001300 
+ 121      00000201 
+ 121      FB0E0D00 
+ 121      01010101 
+ 122              	.LASF8:
+ 123 0000 756E7369 		.ascii	"unsigned int\000"
+ 123      676E6564 
+ 123      20696E74 
+ 123      00
+ 124              	.LASF10:
+ 125 000d 2E2E2F2E 		.ascii	"../../tmk_core/common/print.c\000"
+ 125      2E2F746D 
+ 125      6B5F636F 
+ 125      72652F63 
+ 125      6F6D6D6F 
+ 126              	.LASF5:
+ 127 002b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 127      20756E73 
+ 127      69676E65 
+ 127      6420696E 
+ 127      7400
+ 128              	.LASF11:
+ 129 003d 2F557365 		.ascii	"/Users/jpablobr/tmp/tmk/di0ib-tmk_keyboard/keyboard"
+ 129      72732F6A 
+ 129      7061626C 
+ 129      6F62722F 
+ 129      746D702F 
+ 130 0070 2F746565 		.ascii	"/teensy_lc_menelaus\000"
+ 130      6E73795F 
+ 130      6C635F6D 
+ 130      656E656C 
+ 130      61757300 
+ 131              	.LASF3:
+ 132 0084 73686F72 		.ascii	"short unsigned int\000"
+ 132      7420756E 
+ 132      7369676E 
+ 132      65642069 
+ 132      6E7400
+ 133              	.LASF2:
+ 134 0097 73686F72 		.ascii	"short int\000"
+ 134      7420696E 
+ 134      7400
+ 135              	.LASF0:
+ 136 00a1 7369676E 		.ascii	"signed char\000"
+ 136      65642063 
+ 136      68617200 
+ 137              	.LASF7:
+ 138 00ad 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 138      206C6F6E 
+ 138      6720756E 
+ARM GAS  /var/folders/t8/16hdwfmd2fg_d3q6dgx6bpmw0000gn/T//cce3G323.s 			page 4
+
+
+ 138      7369676E 
+ 138      65642069 
+ 139              	.LASF1:
+ 140 00c4 756E7369 		.ascii	"unsigned char\000"
+ 140      676E6564 
+ 140      20636861 
+ 140      7200
+ 141              	.LASF4:
+ 142 00d2 6C6F6E67 		.ascii	"long int\000"
+ 142      20696E74 
+ 142      00
+ 143              	.LASF9:
+ 144 00db 474E5520 		.ascii	"GNU C99 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 144      43393920 
+ 144      372E322E 
+ 144      31203230 
+ 144      31373039 
+ 145 010e 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m0plus -mno-thum"
+ 145      20726576 
+ 145      6973696F 
+ 145      6E203235 
+ 145      35323034 
+ 146 0141 622D696E 		.ascii	"b-interwork -mthumb -ggdb -O2 -std=gnu99 -fomit-fra"
+ 146      74657277 
+ 146      6F726B20 
+ 146      2D6D7468 
+ 146      756D6220 
+ 147 0174 6D652D70 		.ascii	"me-pointer -falign-functions=16 -ffunction-sections"
+ 147      6F696E74 
+ 147      6572202D 
+ 147      66616C69 
+ 147      676E2D66 
+ 148 01a7 202D6664 		.ascii	" -fdata-sections -fno-common\000"
+ 148      6174612D 
+ 148      73656374 
+ 148      696F6E73 
+ 148      202D666E 
+ 149              	.LASF6:
+ 150 01c4 6C6F6E67 		.ascii	"long long int\000"
+ 150      206C6F6E 
+ 150      6720696E 
+ 150      7400
+ 151              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  /var/folders/t8/16hdwfmd2fg_d3q6dgx6bpmw0000gn/T//cce3G323.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 print.c
+
+NO UNDEFINED SYMBOLS

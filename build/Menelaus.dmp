@@ -1,0 +1,781 @@
+
+build/Menelaus.elf:     file format elf32-littlearm
+build/Menelaus.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000411
+
+Program Header:
+    LOAD off    0x00010000 vaddr 0x00000000 paddr 0x00000000 align 2**16
+         filesz 0x000000c0 memsz 0x000000c0 flags rw-
+    LOAD off    0x00010400 vaddr 0x00000400 paddr 0x00000400 align 2**16
+         filesz 0x00000010 memsz 0x00000010 flags r--
+    LOAD off    0x00010410 vaddr 0x00000410 paddr 0x00000410 align 2**16
+         filesz 0x00008fa8 memsz 0x00008fa8 flags r-x
+    LOAD off    0x0001fe00 vaddr 0x1ffffe00 paddr 0x000093b8 align 2**16
+         filesz 0x00000040 memsz 0x00000040 flags rw-
+    LOAD off    0x00020000 vaddr 0x20000000 paddr 0x000093f8 align 2**16
+         filesz 0x00000000 memsz 0x00000ce0 flags rw-
+    LOAD off    0x0002f800 vaddr 0x1ffff800 paddr 0x1ffff800 align 2**16
+         filesz 0x00000000 memsz 0x00002000 flags rw-
+private flags = 5000200: [Version5 EABI] [soft-float ABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .cfmprotect   00000010  00000400  00000400  00010400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .mstack       00000400  1ffff800  1ffff800  0002f800  2**0
+                  ALLOC
+  2 .pstack       00000200  1ffffc00  1ffffc00  0002f800  2**0
+                  ALLOC
+  3 .vectors      000000c0  00000000  00000000  00010000  2**7
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .text         000075f4  00000410  00000410  00010410  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .rodata       000019b4  00007a04  00007a04  00017a04  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .data         00000040  1ffffe00  000093b8  0001fe00  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .bss          00000ce0  20000000  000093f8  00020000  2**9
+                  ALLOC
+  8 .ram0_init    00000000  20000ce0  20000ce0  0001fe40  2**2
+                  CONTENTS
+  9 .ram0         00000000  20000ce0  20000ce0  0001fe40  2**2
+                  CONTENTS
+ 10 .ram1_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 11 .ram1         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 12 .ram2_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 13 .ram2         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 14 .ram3_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 15 .ram3         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 16 .ram4_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 17 .ram4         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 18 .ram5_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 19 .ram5         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 20 .ram6_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 21 .ram6         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 22 .ram7_init    00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 23 .ram7         00000000  00000000  00000000  0001fe40  2**2
+                  CONTENTS
+ 24 .heap         00000b20  20000ce0  20000ce0  0002f800  2**0
+                  ALLOC
+ 25 .ARM.attributes 0000002d  00000000  00000000  0001fe40  2**0
+                  CONTENTS, READONLY
+ 26 .comment      0000007e  00000000  00000000  0001fe6d  2**0
+                  CONTENTS, READONLY
+ 27 .debug_info   0003957c  00000000  00000000  0001feeb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 28 .debug_abbrev 00008710  00000000  00000000  00059467  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 29 .debug_loc    0000ab39  00000000  00000000  00061b77  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 30 .debug_aranges 00000fd0  00000000  00000000  0006c6b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 31 .debug_ranges 00002030  00000000  00000000  0006d680  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 32 .debug_line   000100e1  00000000  00000000  0006f6b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 33 .debug_str    00005506  00000000  00000000  0007f791  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 34 .debug_frame  00002cf0  00000000  00000000  00084c98  2**2
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000400 l    d  .cfmprotect	00000000 .cfmprotect
+1ffff800 l    d  .mstack	00000000 .mstack
+1ffffc00 l    d  .pstack	00000000 .pstack
+00000000 l    d  .vectors	00000000 .vectors
+00000410 l    d  .text	00000000 .text
+00007a04 l    d  .rodata	00000000 .rodata
+1ffffe00 l    d  .data	00000000 .data
+20000000 l    d  .bss	00000000 .bss
+20000ce0 l    d  .ram0_init	00000000 .ram0_init
+20000ce0 l    d  .ram0	00000000 .ram0
+00000000 l    d  .ram1_init	00000000 .ram1_init
+00000000 l    d  .ram1	00000000 .ram1
+00000000 l    d  .ram2_init	00000000 .ram2_init
+00000000 l    d  .ram2	00000000 .ram2
+00000000 l    d  .ram3_init	00000000 .ram3_init
+00000000 l    d  .ram3	00000000 .ram3
+00000000 l    d  .ram4_init	00000000 .ram4_init
+00000000 l    d  .ram4	00000000 .ram4
+00000000 l    d  .ram5_init	00000000 .ram5_init
+00000000 l    d  .ram5	00000000 .ram5
+00000000 l    d  .ram6_init	00000000 .ram6_init
+00000000 l    d  .ram6	00000000 .ram6
+00000000 l    d  .ram7_init	00000000 .ram7_init
+00000000 l    d  .ram7	00000000 .ram7
+20000ce0 l    d  .heap	00000000 .heap
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 hal_lld.c
+00000000 l    df *ABS*	00000000 vectors.c
+00000000 l    df *ABS*	00000000 build/obj/crt0_v6m.o
+00000436 l       .text	00000000 msloop
+00000440 l       .text	00000000 endmsloop
+00000444 l       .text	00000000 psloop
+0000044e l       .text	00000000 endpsloop
+00000454 l       .text	00000000 dloop
+00000462 l       .text	00000000 enddloop
+00000468 l       .text	00000000 bloop
+00000472 l       .text	00000000 endbloop
+0000047e l       .text	00000000 initloop
+0000048a l       .text	00000000 endinitloop
+00000492 l       .text	00000000 finiloop
+0000049e l       .text	00000000 endfiniloop
+00000000 l    df *ABS*	00000000 build/obj/chcoreasm_v6m.o
+e000ed04 l       *ABS*	00000000 SCB_ICSR
+10000000 l       *ABS*	00000000 ICSR_PENDSVSET
+80000000 l       *ABS*	00000000 ICSR_NMIPENDSET
+00000000 l    df *ABS*	00000000 _udivsi3.o
+0000052c l       .text	00000000 .udivsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 _divsi3.o
+00000640 l       .text	00000000 .divsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 muldf3.c
+00000000 l    df *ABS*	00000000 fixdfsi.c
+00000000 l    df *ABS*	00000000 floatsidf.c
+00000000 l    df *ABS*	00000000 _clzsi2.o
+00000000 l    df *ABS*	00000000 crt1.c
+00007a74 l     O .rodata	00000080 ram_areas
+00000000 l    df *ABS*	00000000 chsys.c
+00000ec0 l     F .text	00000004 _idle_thread
+00007af4 l     O .rodata	00000018 idle_descriptor.5724
+00000000 l    df *ABS*	00000000 chdebug.c
+00000000 l    df *ABS*	00000000 chvt.c
+00007b5c l     O .rodata	0000000b __func__.5725
+00007b68 l     O .rodata	0000000d __func__.5732
+00000000 l    df *ABS*	00000000 chschd.c
+000012a0 l     F .text	0000005c wakeup
+00007b98 l     O .rodata	0000000c __func__.5722
+00007ba4 l     O .rodata	00000011 __func__.5729
+00007bb8 l     O .rodata	0000000d __func__.5758
+00000000 l    df *ABS*	00000000 chthreads.c
+00007bd8 l     O .rodata	0000000c __func__.5043
+00007be4 l     O .rodata	0000000c __func__.5232
+00007bf0 l     O .rodata	00000014 __func__.5244
+00007c04 l     O .rodata	00000016 __func__.5731
+00007c1c l     O .rodata	0000000c __func__.5744
+00007c28 l     O .rodata	0000000d __func__.5765
+00007c38 l     O .rodata	0000000b __func__.5780
+00007c44 l     O .rodata	0000000e __func__.5812
+00007c54 l     O .rodata	0000000d __func__.5824
+00000000 l    df *ABS*	00000000 chregistry.c
+00007c64 l     O .rodata	0000000c __func__.5444
+00007c70 l     O .rodata	00000010 __func__.6124
+00000000 l    df *ABS*	00000000 chmtx.c
+00007c98 l     O .rodata	0000000c __func__.5043
+00007ca4 l     O .rodata	00000010 __func__.5717
+00007cb4 l     O .rodata	0000000b __func__.5725
+00007cc0 l     O .rodata	0000000c __func__.5748
+00000000 l    df *ABS*	00000000 chmemcore.c
+20000154 l     O .bss	00000004 endmem
+20000158 l     O .bss	00000004 nextmem
+00007ccc l     O .rodata	0000000c __func__.5043
+00007cd8 l     O .rodata	00000014 __func__.5728
+00000000 l    df *ABS*	00000000 chheap.c
+20000160 l     O .bss	00000020 default_heap
+00007cec l     O .rodata	0000000b __func__.5747
+00000000 l    df *ABS*	00000000 chmempools.c
+00007cf8 l     O .rodata	0000000c __func__.5043
+00007d04 l     O .rodata	0000000c __func__.5743
+00000000 l    df *ABS*	00000000 chcore_v6m.c
+00000000 l    df *ABS*	00000000 hal.c
+00000000 l    df *ABS*	00000000 hal_st.c
+00000000 l    df *ABS*	00000000 hal_buffers.c
+00007d10 l     O .rodata	0000000c __func__.5444
+00007d1c l     O .rodata	0000000e __func__.6887
+00007d2c l     O .rodata	00000017 __func__.6898
+00007d44 l     O .rodata	0000001a __func__.6912
+00007d60 l     O .rodata	00000013 __func__.6921
+00000000 l    df *ABS*	00000000 hal_usb.c
+00002130 l     F .text	00000024 set_address
+00007dac l     O .rodata	0000000c __func__.5444
+00007db8 l     O .rodata	00000009 __func__.6873
+00007dc4 l     O .rodata	00000011 __func__.6890
+00007dd8 l     O .rodata	00000015 __func__.6895
+00007df0 l     O .rodata	00000011 __func__.6906
+00007e04 l     O .rodata	00000012 __func__.6914
+00007e18 l     O .rodata	0000000b __func__.6972
+00007e24 l     O .rodata	0000000c __func__.6986
+00007e30 l     O .rodata	00000002 active_status
+00007e34 l     O .rodata	00000002 halted_status
+00007e38 l     O .rodata	00000002 zero_status
+00000000 l    df *ABS*	00000000 nvic.c
+00007e3c l     O .rodata	0000001d __func__.6428
+00000000 l    df *ABS*	00000000 hal_pal_lld.c
+00007eb8 l     O .rodata	00000014 __func__.6432
+00000000 l    df *ABS*	00000000 hal_st_lld.c
+00000000 l    df *ABS*	00000000 hal_usb_lld.c
+20000600 l     O .bss	000004c0 _usbb
+20000400 l     O .bss	00000200 _bdt
+20000ac0 l     O .bss	00000001 _usbbn
+20000aec l     O .bss	00000008 ep0setup_buffer
+00007ecc l     O .rodata	00000024 ep0config
+00000000 l    df *ABS*	00000000 board.c
+00000000 l    df *ABS*	00000000 usb_main.c
+00003500 l     F .text	000000a8 usb_get_descriptor_cb
+00003630 l     F .text	00000002 usb_sof_cb
+00003740 l     F .text	00000094 console_flush_cb
+000036b0 l     F .text	00000090 keyboard_idle_timer_cb
+000037e0 l     F .text	0000020c usb_request_hook_cb
+00003a10 l     F .text	00000078 usb_event_cb
+20000b2c l     O .bss	00000014 console_ep_state
+20000b40 l     O .bss	00000014 console_flush_timer
+20000b54 l     O .bss	00000050 console_queue_buffer
+20000ba4 l     O .bss	00000014 extra_ep_state
+20000bbc l     O .bss	00000014 kbd_ep_state
+20000bd4 l     O .bss	00000014 keyboard_idle_timer
+20000bfc l     O .bss	00000014 mouse_ep_state
+20000c18 l     O .bss	00000014 nkro_ep_state
+1ffffe04 l     O .data	00000016 usb_string_serial
+0000824c l     O .rodata	0000000c __func__.5043
+00008258 l     O .rodata	00000011 __func__.7105
+0000826c l     O .rodata	00000024 console_ep_config
+00008290 l     O .rodata	00000008 console_hid_descriptor
+00008328 l     O .rodata	00000086 hid_configuration_descriptor_data
+00008298 l     O .rodata	00000015 console_hid_report_desc_data
+000082b0 l     O .rodata	00000008 console_hid_report_descriptor
+000082b8 l     O .rodata	00000024 extra_ep_config
+000082dc l     O .rodata	00000008 extra_hid_descriptor
+000082e4 l     O .rodata	00000031 extra_hid_report_desc_data
+00008318 l     O .rodata	00000008 extra_hid_report_descriptor
+00008320 l     O .rodata	00000008 hid_configuration_descriptor
+000083b0 l     O .rodata	00000024 kbd_ep_config
+000083d4 l     O .rodata	00000008 keyboard_hid_descriptor
+000083dc l     O .rodata	00000040 keyboard_hid_report_desc_data
+0000841c l     O .rodata	00000008 keyboard_hid_report_descriptor
+00008424 l     O .rodata	00000024 mouse_ep_config
+00008448 l     O .rodata	00000008 mouse_hid_descriptor
+00008450 l     O .rodata	00000051 mouse_hid_report_desc_data
+000084a4 l     O .rodata	00000008 mouse_hid_report_descriptor
+000084ac l     O .rodata	00000024 nkro_ep_config
+000084d0 l     O .rodata	00000008 nkro_hid_descriptor
+000084d8 l     O .rodata	00000039 nkro_hid_report_desc_data
+00008514 l     O .rodata	00000008 nkro_hid_report_descriptor
+0000851c l     O .rodata	00000008 usb_device_descriptor
+00008524 l     O .rodata	00000012 usb_device_descriptor_data
+00008538 l     O .rodata	00000022 usb_string_description
+0000855c l     O .rodata	00000004 usb_string_langid
+00008560 l     O .rodata	0000000c usb_string_vendor
+0000856c l     O .rodata	00000020 usb_strings
+0000858c l     O .rodata	00000010 usbcfg
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 keymap_menelaus.c
+000085c8 l     O .rodata	00000005 __m.7102
+000085d0 l     O .rodata	00000005 __m.7104
+000085d8 l     O .rodata	00000005 __m.7107
+000085e0 l     O .rodata	00000005 __m.7109
+000085e8 l     O .rodata	00000005 __m.7112
+000085f0 l     O .rodata	00000005 __m.7114
+00000000 l    df *ABS*	00000000 matrix.c
+00003f90 l     F .text	00000038 unselect_rows
+20000c2c l     O .bss	00000008 matrix
+20000c34 l     O .bss	00000008 matrix_debouncing
+1ffffe30 l     O .data	00000001 debouncing
+00000000 l    df *ABS*	00000000 keymap_common.c
+00000000 l    df *ABS*	00000000 led.c
+00000000 l    df *ABS*	00000000 host.c
+20000c3c l     O .bss	00000004 driver
+20000c40 l     O .bss	00000002 last_consumer_report
+20000c42 l     O .bss	00000002 last_system_report
+00000000 l    df *ABS*	00000000 keyboard.c
+20000c44 l     O .bss	00000001 led_status.7206
+20000c48 l     O .bss	00000008 matrix_prev.7205
+00000000 l    df *ABS*	00000000 action.c
+00000000 l    df *ABS*	00000000 action_tapping.c
+00004d70 l     F .text	00000038 debug_waiting_buffer
+00004db0 l     F .text	00000108 waiting_buffer_scan_tap.part.3
+00004ec0 l     F .text	000004d2 process_tapping
+20000c50 l     O .bss	00000008 tapping_key
+20000c58 l     O .bss	00000040 waiting_buffer
+20000c98 l     O .bss	00000001 waiting_buffer_head
+20000c99 l     O .bss	00000001 waiting_buffer_tail
+00000000 l    df *ABS*	00000000 action_macro.c
+00000000 l    df *ABS*	00000000 action_layer.c
+00000000 l    df *ABS*	00000000 action_util.c
+20000ca4 l     O .bss	00000010 __compound_literal.0
+20000cb4 l     O .bss	00000001 oneshot_mods
+20000cb5 l     O .bss	00000001 real_mods
+20000cb6 l     O .bss	00000001 weak_mods
+00000000 l    df *ABS*	00000000 keymap.c
+000059d0 l     F .text	00000174 keycode_to_action
+00000000 l    df *ABS*	00000000 util.c
+00000000 l    df *ABS*	00000000 hook.c
+00000000 l    df *ABS*	00000000 suspend.c
+00000000 l    df *ABS*	00000000 printf.c
+00005d70 l     F .text	000000a8 uli2a
+00005e20 l     F .text	000000a8 ui2a
+00005ed0 l     F .text	0000007a putchw
+20000cbc l     O .bss	00000004 stdout_putf
+20000cc0 l     O .bss	00000004 stdout_putp
+00000000 l    df *ABS*	00000000 timer.c
+0000892c l     O .rodata	0000000c __func__.5043
+00000000 l    df *ABS*	00000000 bootloader.c
+00000000 l    df *ABS*	00000000 bootmagic.c
+000062d0 l     F .text	00000082 scan_key
+00000000 l    df *ABS*	00000000 eeconfig.c
+20000cc8 l     O .bss	00000004 flashend
+00000000 l    df *ABS*	00000000 mousekey.c
+000069a0 l     F .text	00000080 move_unit
+00006a20 l     F .text	00000070 wheel_unit
+20000ccc l     O .bss	00000002 last_timer
+20000cd0 l     O .bss	00000005 mouse_report
+20000cd5 l     O .bss	00000001 mousekey_accel
+20000cd6 l     O .bss	00000001 mousekey_repeat
+00000000 l    df *ABS*	00000000 command.c
+00006ef0 l     F .text	0000001c mousekey_console_help
+00006f10 l     F .text	000000f8 mousekey_param_inc
+00007010 l     F .text	000000f8 mousekey_param_dec
+00007110 l     F .text	00000020 switch_default_layer
+00007130 l     F .text	00000434 command_common
+20000cd8 l     O .bss	00000001 mousekey_param
+20000cd9 l     O .bss	00000001 sleep_led_test.7277
+00008cbc l     O .rodata	0000000a CSWTCH.63
+00000000 l    df *ABS*	00000000 sleep_led.c
+20000cdc l     O .bss	00000002 timer.6442
+00009378 l     O .rodata	00000040 breathing_table
+00000000 l    df *ABS*	00000000 memcpy-stub.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 debug.c
+00007ef0 g     O .rodata	00000294 pal_default_config
+00000eb0  w    F .text	00000002 Vector58
+00000eb0  w    F .text	00000002 Vector9C
+000043a0 g     F .text	00000018 host_keyboard_leds
+00002970 g     F .text	0000002c nvicEnableVector
+00005d10  w    F .text	00000002 matrix_power_down
+20000bd0 g     O .bss	00000001 keyboard_idle
+00000eb0  w    F .text	00000002 VectorAC
+00000f50 g     F .text	00000068 chSysTimerHandlerI
+000017d0 g     F .text	00000012 chThdExit
+000013a0 g     F .text	00000050 chSchGoSleepTimeoutS
+00000eb0  w    F .text	00000002 DebugMon_Handler
+00005940 g     F .text	00000010 add_mods
+00004350 g     F .text	00000010 keymap_fn_to_action
+00005cf0 g     F .text	0000000a suspend_power_down
+000019f0 g     F .text	00000118 chMtxLockS
+00000000 g       .rodata	00000000 __ram4_start__
+00006970 g     F .text	0000000c eeconfig_write_default_layer
+00000eb0  w    F .text	00000002 Vector5C
+00001010 g     F .text	00000028 _dbg_check_unlock
+00005600 g     F .text	00000018 default_layer_and
+00003640 g     F .text	0000006c console_in_cb
+00006170 g     F .text	00000014 init_printf
+00001d00 g     F .text	000000b8 chHeapFree
+1ffffe3b g     O .data	00000001 mk_time_to_max
+00000000 g       .ram5	00000000 __ram5_clear__
+00002370 g     F .text	00000064 usbStartTransmitI
+00000eb0  w    F .text	00000002 HardFault_Handler
+00002050 g     F .text	0000008c obqPutTimeout
+00006960 g     F .text	0000000a eeconfig_read_default_layer
+00002810 g     F .text	000000c4 _usb_ep0in
+20000ce0 g       .ram0_init	00000000 __ram0_init__
+00003620 g     F .text	00000002 nkro_in_cb
+20000cc4 g     O .bss	00000001 keymap_config
+00002c60 g     F .text	00000024 SysTick_Handler
+00000eb0  w    F .text	00000002 Vector8C
+00000000 g       .ram1	00000000 __ram1_free__
+00005970 g     F .text	0000000c clear_mods
+00000000 g       .rodata	00000000 __ram6_start__
+00000eb0  w    F .text	00000002 PendSV_Handler
+00001e30 g     F .text	00000014 NMI_Handler
+00000000 g     O .vectors	000000c0 _vectors
+000093b8 g       .data	00000000 __exidx_end
+00005ce0  w    F .text	00000002 hook_bootmagic
+00005950 g     F .text	00000010 del_mods
+00003e30 g     F .text	0000000a sendchar_pf
+000055b0 g     F .text	00000002 default_layer_debug
+000024b0 g     F .text	00000016 _usb_wakeup
+000035b0 g     F .text	00000002 kbd_in_cb
+00001350 g     F .text	00000048 chSchGoSleepS
+000018a0 g     F .text	00000028 chThdEnqueueTimeoutS
+1ffffe34 g     O .data	00000004 keyboard_report
+00001f20 g     F .text	00000022 obqGetFullBufferI
+20000ce0 g       .ram0	00000000 __ram0_free__
+20000ce0 g       .heap	00000000 __heap_base__
+00006920 g     F .text	0000001c eeconfig_is_enabled
+00003a90 g     F .text	00000088 init_usb_driver
+00004ca0 g     F .text	00000024 clear_keyboard_but_mods
+000034a0 g     F .text	00000018 usb_lld_clear_out
+00003c50 g     F .text	00000084 send_mouse
+00003b20 g     F .text	00000024 send_remote_wakeup
+000013f0 g     F .text	0000007c chSchWakeupS
+000058a0 g     F .text	00000070 del_key
+000019b0 g     F .text	0000001a chRegFindThreadByWorkingArea
+000093f8 g       *ABS*	00000000 __ram3_init_text__
+00001230 g     F .text	00000014 _scheduler_init
+00002170 g     F .text	00000020 usbObjectInit
+00005c40 g     F .text	00000050 bitrev16
+000014e0 g     F .text	00000024 chSchRescheduleS
+00000eb0  w    F .text	00000002 Vector94
+00000000 g       *ABS*	00000000 __ram5_end__
+00000000 g       .ram5	00000000 __ram5_noinit__
+00000000 g       *ABS*	00000000 __ram5_size__
+00000eb0  w    F .text	00000002 VectorA8
+000078e0 g     F .text	00000086 memcpy
+000024d0 g     F .text	00000340 _usb_ep0setup
+00002c90 g     F .text	00000024 st_lld_init
+00000eb0  w    F .text	00000002 VectorB4
+00004690 g     F .text	000001bc register_code
+00005930 g     F .text	0000000c get_mods
+00004360 g     F .text	00000028 led_set
+00005800 g     F .text	00000094 add_key
+00001840 g     F .text	0000002c chThdSuspendS
+00010000 g       *ABS*	00000000 __eeprom_workarea_end__
+00006270 g     F .text	00000044 timer_elapsed
+00001250 g     F .text	00000050 chSchReadyI
+00003fd0 g     F .text	000000bc matrix_init
+00000410 g       .vectors	00000000 __fini_array_end
+00005980 g     F .text	00000010 add_weak_mods
+00000fc0 g     F .text	00000020 _dbg_check_enable
+1ffffe00 g       .pstack	00000000 __main_thread_stack_end__
+00001160 g     F .text	0000001c _vt_init
+000093b8 g       .rodata	00000000 __rodata_end__
+20000c10 g     O .bss	00000005 mouse_report_blank
+1ffffe31 g     O .data	00000001 keyboard_nkro
+0000052c g     F .text	0000010a .hidden __udivsi3
+00004500 g     F .text	00000010 keyboard_init
+00001ce0 g     F .text	00000020 _heap_init
+00000eb0  w    F .text	00000002 Vector74
+000010a0 g     F .text	0000002c _dbg_check_enter_isr
+00001e90 g     F .text	00000020 halInit
+00004390 g     F .text	0000000c host_set_driver
+00000eb0  w    F .text	00000002 UsageFault_Handler
+00005cb0  w    F .text	00000002 hook_default_layer_change
+00006da0 g     F .text	00000120 mousekey_task
+20000000 g       .bss	00000000 _bss_start
+00005c90  w    F .text	00000002 hook_keyboard_loop
+00004320 g     F .text	00000024 keymap_key_to_keycode
+0000f800 g       .cfmprotect	00000000 __eeprom_workarea_start__
+00002d20 g     F .text	00000088 usb_packet_receive
+00006380 g     F .text	000002ac bootmagic
+20000000 g     O .bss	000000d8 ch_idle_thread_wa
+00005f50 g     F .text	0000021c tfp_format
+20001800 g       .heap	00000000 __heap_end__
+00002b10 g     F .text	00000110 _pal_lld_setpadmode
+00000000 g       *ABS*	00000000 __ram1_size__
+00000eb0  w    F .text	00000002 Vector40
+00006980 g     F .text	0000000a eeconfig_read_keymap
+00002300 g     F .text	00000064 usbStartReceiveI
+00000eb0  w    F .text	00000002 VectorBC
+000033c0 g     F .text	00000050 usb_lld_read_setup
+000062c0 g     F .text	0000000c bootloader_jump
+00000000 g       .ram1	00000000 __ram1_clear__
+000044b0 g     F .text	00000044 host_consumer_send
+00007870 g     F .text	00000050 sleep_led_init
+00004510 g     F .text	00000114 keyboard_task
+20000ad8 g     O .bss	00000014 ep0out
+000029d0 g     F .text	00000002 hal_lld_init
+00003410 g     F .text	00000026 usb_lld_start_out
+00000000 g       .ram7	00000000 __ram7_free__
+00000000 g       *ABS*	00000000 __ram4_size__
+00003a00  w    F .text	00000008 hook_usb_suspend_entry
+00000000 g       *ABS*	00000000 __ram1_end__
+00000000 g       *ABS*	00000000 __ram4_end__
+00004ce0 g     F .text	00000070 is_tap_key
+000093b8 g       .data	00000000 __exidx_start
+00000818 g     F .text	000004e4 .hidden __aeabi_dmul
+00001780 g     F .text	00000050 chThdExitS
+00001f50 g     F .text	00000048 obqReleaseEmptyBufferI
+00003600 g     F .text	00000002 mouse_in_cb
+00005740 g     F .text	00000002 layer_debug
+000093f8 g       *ABS*	00000000 __ram0_init_text__
+00006ba0 g     F .text	00000120 mousekey_off
+000093f8 g       *ABS*	00000000 __ram1_init_text__
+1ffffe3d g     O .data	00000001 mk_wheel_time_to_max
+00002000 g       *ABS*	00000000 __ram0_size__
+00003e40  w    F .text	00000002 hook_early_init
+00003460 g     F .text	00000018 usb_lld_stall_out
+000093f8 g       *ABS*	00000000 __ram5_init_text__
+00005620 g     F .text	00000018 default_layer_xor
+00006690 g     F .text	00000230 eeprom_write_byte
+00003b50 g     F .text	0000000c keyboard_leds
+00005cc0  w    F .text	00000002 hook_layer_change
+00000f40 g     F .text	0000000c chSysHalt
+00000800 g       *ABS*	00000000 __eeprom_workarea_size__
+00000eb0  w    F .text	00000002 Vector64
+20000ce0 g       .bss	00000000 _bss_end
+00006190 g     F .text	00000028 tfp_printf
+00005480 g     F .text	00000126 action_macro_play
+00000410 g     F .text	00000000 Reset_Handler
+00002450 g     F .text	0000005e _usb_suspend
+00001eb0 g     F .text	00000008 stInit
+1ffffe3a g     O .data	00000001 mk_max_speed
+00000eb0  w    F .text	00000002 Vector54
+00003b60 g     F .text	000000e8 send_keyboard
+00000eb0  w    F .text	00000002 Vector98
+00005d50 g     F .text	00000020 suspend_wakeup_init
+00002b00 g     F .text	0000000a _pal_lld_readpad
+000061c0 g     F .text	00000002 timer_init
+1ffffe39 g     O .data	00000001 mk_interval
+00000000 g       .ram4	00000000 __ram4_clear__
+00000000 g       .ram5	00000000 __ram5_free__
+000055c0 g     F .text	00000014 default_layer_set
+000093f8 g       *ABS*	00000000 __ram6_init_text__
+00006950 g     F .text	0000000c eeconfig_write_debug
+00000eb0  w    F .text	00000002 Vector24
+00001100 g     F .text	00000024 chDbgCheckClassI
+00001b10 g     F .text	0000003c chMtxLock
+00000000 g       .ram3	00000000 __ram3_clear__
+00005700 g     F .text	00000018 layer_and
+00000e40  w    F .text	00000002 __default_exit
+00000000 g       *ABS*	00000000 __ram6_end__
+00000000 g       .ram6_init	00000000 __ram6_init__
+000053a0 g     F .text	000000dc action_tapping_process
+000032f0 g     F .text	0000004c usb_lld_reset
+00001510 g     F .text	00000054 chSchDoReschedule
+00000ed0 g     F .text	00000064 chSysInit
+00000000 g       .ram7_init	00000000 __ram7_init__
+00004640 g     F .text	00000044 action_exec
+00000000 g       .ram6	00000000 __ram6_free__
+00002210 g     F .text	00000064 usbInitEndpointI
+000017f0 g     F .text	0000004c chThdSleep
+00000640 g     F .text	00000000 .hidden __aeabi_idiv
+00000eb0  w    F .text	00000002 Vector84
+00000000 g       .ram2	00000000 __ram2_noinit__
+00004440 g     F .text	00000014 host_mouse_send
+00001ec0 g     F .text	0000005c obqObjectInit
+00005640 g     F .text	00000018 layer_clear
+00004850 g     F .text	000000d2 unregister_code
+00000000 g       .ram6	00000000 __ram6_noinit__
+00000ddc g     F .text	0000003c .hidden __clzsi2
+00003390 g     F .text	00000028 usb_lld_get_status_in
+000042b0 g     F .text	00000068 matrix_print
+00000000 g       .ram4_init	00000000 __ram4_init__
+00002c20 g     F .text	0000003c _pal_lld_init
+00006940 g     F .text	0000000a eeconfig_read_debug
+000059c0 g     F .text	0000000c clear_oneshot_mods
+00000000 g       .ram7	00000000 __ram7_clear__
+00005750 g     F .text	00000048 layer_switch_get_action
+000019d0 g     F .text	0000001c chMtxObjectInit
+000034c0 g     F .text	00000018 usb_lld_clear_in
+000030d0 g     F .text	00000024 usb_lld_init
+00001c20 g     F .text	00000020 _core_init
+1ffffe00 g       .data	00000000 _data_start
+00000000 g       *ABS*	00000000 __ram7_size__
+000039f0  w    F .text	00000010 hook_usb_wakeup
+00000400 g     O .cfmprotect	00000010 _cfm
+00004d50 g     F .text	00000006 debug_event
+20000bb8 g     O .bss	00000003 extra_report_blank
+00005b60  w    F .text	000000e0 action_for_key
+00006630 g     F .text	00000060 eeprom_read_byte
+000028e0 g     F .text	0000008c _usb_ep0out
+000004e0 g     F .text	00000000 _port_switch
+1ffffe38 g     O .data	00000001 mk_delay
+00000e20  w    F .text	00000002 __core_init
+00000000 g       .ram4	00000000 __ram4_noinit__
+000056e0 g     F .text	00000018 layer_or
+000020e0 g     F .text	00000048 obqTryFlushI
+00007580  w    F .text	00000004 command_console_extra
+000042a0 g     F .text	0000000c matrix_get_row
+00000e30  w    F .text	00000002 __late_init
+00001e50 g     F .text	00000038 _port_irq_epilogue
+00000000 g       .rodata	00000000 __ram7_start__
+00006360 g     F .text	00000016 bootmagic_scan_key
+00000000 g       .ram6	00000000 __ram6_clear__
+20000be8 g     O .bss	00000002 keyboard_led_stats
+00000d68 g     F .text	00000074 .hidden __aeabi_i2d
+00006a90 g     F .text	00000104 mousekey_on
+00001130 g     F .text	00000024 chDbgCheckClassS
+00005960 g     F .text	0000000c set_mods
+000061d0 g     F .text	0000004c timer_read
+00001fa0 g     F .text	00000050 obqGetEmptyBufferTimeoutS
+1ffffe3c g     O .data	00000001 mk_wheel_max_speed
+1ffffe40 g       .data	00000000 _data_end
+000035c0 g     F .text	00000034 console_queue_onotify
+00000814  w    F .text	00000002 .hidden __aeabi_ldiv0
+00003da0 g     F .text	00000084 sendchar
+000023e0 g     F .text	00000070 _usb_reset
+000059a0 g     F .text	0000000c clear_weak_mods
+00000000 g       *ABS*	00000000 __ram3_size__
+000093b8 g       *ABS*	00000000 _textdata
+00005d00  w    F .text	00000002 matrix_power_up
+00000410 g       .vectors	00000000 __fini_array_start
+00004cd0 g     F .text	0000000c clear_keyboard
+00000000 g       .ram2	00000000 __ram2_clear__
+00000000 g       *ABS*	00000000 __ram3_end__
+000059b0 g     F .text	0000000c set_oneshot_mods
+00000000 g       *ABS*	00000000 __ram2_size__
+00001040 g     F .text	00000024 _dbg_check_lock_from_isr
+00000000 g       .rodata	00000000 __ram1_start__
+00007a04 g       .rodata	00000000 __rodata_base__
+00005b50  w    F .text	00000002 action_function
+00007968 g     F .text	0000009a memset
+00000eb0  w    F .text	00000002 MemManage_Handler
+00003e90 g     F .text	0000009c main
+00000eb0  w    F .text	00000002 Vector6C
+00000000 g       *ABS*	00000000 __ram6_size__
+00001900 g     F .text	00000040 chRegFirstThread
+00002db0 g     F .text	00000320 VectorA0
+20000bec g     O .bss	00000010 keyboard_report_sent
+000093f8 g       *ABS*	00000000 __ram2_init_text__
+00002280 g     F .text	00000074 usbDisableEndpointsI
+0000052c g     F .text	00000000 .hidden __aeabi_uidiv
+00003ce0 g     F .text	0000005c send_system
+00000eb0  w    F .text	00000002 SVC_Handler
+20000180 g     O .bss	000000e8 USBD1
+00006cc0 g     F .text	000000d4 mousekey_send
+00000000 g       .ram3	00000000 __ram3_free__
+00000410 g       .vectors	00000000 __init_array_end
+00004930 g     F .text	0000036a process_action
+000078c0 g     F .text	00000010 sleep_led_enable
+00000eb0  w    F .text	00000002 Vector7C
+00005cd0  w    F .text	00000008 hook_keyboard_leds_change
+000093f8 g       *ABS*	00000000 __ram4_init_text__
+00000000 g       .ram1	00000000 __ram1_noinit__
+00003d40 g     F .text	0000005c send_consumer
+00000640 g     F .text	000001cc .hidden __divsi3
+00007800 g     F .text	00000064 VectorB0
+00007c80 g     O .rodata	00000016 ch_debug
+000068e0 g     F .text	00000034 eeconfig_init
+00002190 g     F .text	00000074 usbStart
+00000eb0  w    F .text	00000002 Vector90
+00004630 g     F .text	00000008 keyboard_set_leds
+00000500 g     F .text	00000000 _port_thread_start
+00000eb0  w    F .text	00000002 Vector60
+00001dc0 g     F .text	00000028 chPoolFreeI
+00000eb0  w    F .text	00000002 Vector1C
+000014a0 g     F .text	00000040 chSchDoRescheduleAhead
+000018d0 g     F .text	0000002c chThdDequeueNextI
+00000eb0  w    F .text	00000002 Vector48
+00000000 g       .ram2_init	00000000 __ram2_init__
+00000000 g       *ABS*	00000000 __ram2_end__
+00003480 g     F .text	00000018 usb_lld_stall_in
+1ffffc00 g       .pstack	00000000 __process_stack_base__
+20000ce0 g       .ram0	00000000 __ram0_clear__
+20000ca0 g     O .bss	00000004 layer_state
+000078d0 g     F .text	00000010 sleep_led_disable
+00000eb0  w    F .text	00000002 Vector70
+000029a0 g     F .text	00000028 nvicSetSystemHandlerPriority
+000011e0 g     F .text	0000004c chVTDoResetI
+00007590 g     F .text	0000026c command_proc
+000016d0 g     F .text	000000ac chThdRelease
+00000000 g       .ram3	00000000 __ram3_noinit__
+000015b0 g     F .text	000000b0 chThdCreateSuspendedI
+00001ff0 g     F .text	00000060 obqPostFullBufferS
+1ffffe00 g       .data	00000000 _data
+00001070 g     F .text	00000028 _dbg_check_unlock_from_isr
+00001df0 g     F .text	00000040 chPoolFree
+20000ce0 g       .ram0	00000000 __ram0_noinit__
+00000e50 g     F .text	00000060 __init_ram_areas
+00000eb0  w    F .text	00000002 Vector4C
+00000000 g       .rodata	00000000 __ram2_start__
+00000eb0  w    F .text	00000002 Vector80
+00001870 g     F .text	00000030 chThdResumeI
+00000510 g     F .text	00000000 _port_switch_from_isr
+000031b0 g     F .text	00000014 usb_lld_set_address
+00006220 g     F .text	0000004c timer_read32
+1ffffe1c g     O .data	00000014 chibios_driver
+00000000 g       *ABS*	00000000 __ram7_end__
+00000eb0  w    F .text	00000002 Vector68
+00001b50 g     F .text	000000c8 chMtxUnlock
+1ffffc00 g       .mstack	00000000 __main_stack_end__
+00006990 g     F .text	0000000c eeconfig_write_keymap
+00000638 g     F .text	00000008 .hidden __aeabi_uidivmod
+00000eb0  w    F .text	00000002 Vector78
+00000000 g       .ram5_init	00000000 __ram5_init__
+00001300 g     F .text	00000050 chSchReadyAheadI
+1ffffe40 g       .data	00000000 _edata
+000056a0 g     F .text	0000001c layer_off
+00004d60 g     F .text	00000006 debug_record
+00000eb0 g     F .text	00000002 _unhandled_exception
+00005d20 g     F .text	00000028 suspend_wakeup_condition
+000055e0 g     F .text	00000018 default_layer_or
+00000eb0  w    F .text	00000002 Vector88
+00001660 g     F .text	0000006c chThdCreate
+1ffffc00 g       .pstack	00000000 __main_thread_stack_base__
+00001180 g     F .text	0000005c chVTDoSetI
+00000cfc g     F .text	0000006c .hidden __aeabi_d2iz
+20000cd7 g     O .bss	00000001 command_state
+00002160 g     F .text	00000008 usbInit
+000093f8 g       *ABS*	00000000 __ram7_init_text__
+00000000 g       .ram3_init	00000000 __ram3_init__
+00005990 g     F .text	00000010 del_weak_mods
+00005680 g     F .text	00000020 layer_on
+00003100 g     F .text	000000a8 usb_lld_start
+000057a0 g     F .text	00000058 send_keyboard_report
+1ffff800 g       .rodata	00000000 __ram0_start__
+0000051c g       .text	00000000 _port_exit_from_isr
+000056c0 g     F .text	00000020 layer_invert
+00000000 g       .ram1_init	00000000 __ram1_init__
+00005ca0  w    F .text	00000006 hook_matrix_change
+00003610 g     F .text	00000002 extra_in_cb
+00000814  w    F .text	00000002 .hidden __aeabi_idiv0
+00000410 g       .vectors	00000000 __init_array_start
+00001c90 g     F .text	00000044 chCoreAllocAligned
+00003340 g     F .text	0000001c usb_lld_disable_endpoints
+00006ec0 g     F .text	00000024 mousekey_clear
+00004460 g     F .text	00000044 host_system_send
+00001470 g     F .text	00000028 chSchIsPreemptionRequired
+00003440 g     F .text	00000014 usb_lld_start_in
+000093b8 g       *ABS*	00000000 _textdata_start
+00003360 g     F .text	00000028 usb_lld_get_status_out
+00000000 g       .rodata	00000000 __ram5_start__
+00001570 g     F .text	00000034 _thread_init
+00000eb0  w    F .text	00000002 BusFault_Handler
+00000eb0  w    F .text	00000002 Vector50
+00000fe0 g     F .text	00000024 _dbg_check_lock
+200000d8 g     O .bss	0000007c ch
+00008634 g     O .rodata	00000134 keymaps
+00003f30 g     F .text	00000054 action_get_macro
+00000000 g       .ram2	00000000 __ram2_free__
+20000ac4 g     O .bss	00000014 ep0in
+00007570  w    F .text	00000004 command_extra
+00000000 g       .ram4	00000000 __ram4_free__
+20000c9c g     O .bss	00000004 default_layer_state
+00001940 g     F .text	00000064 chRegNextThread
+20001800 g       *ABS*	00000000 __ram0_end__
+00002cc0 g     F .text	00000060 usb_packet_transmit
+00001c40 g     F .text	00000050 chCoreAllocAlignedI
+1ffff800 g       .mstack	00000000 __main_stack_base__
+00000eb0  w    F .text	00000002 Vector44
+00000eb0  w    F .text	00000002 Vector28
+000034f0 g     F .text	00000002 boardInit
+00000eb0  w    F .text	00000002 VectorB8
+00000400 g       *ABS*	00000000 __main_stack_size__
+20000af4 g     O .bss	00000038 console_buf_queue
+00000000 g       .ram7	00000000 __ram7_noinit__
+00004090 g     F .text	00000210 matrix_scan
+000010d0 g     F .text	0000002c _dbg_check_leave_isr
+1ffffe00 g     O .data	00000001 keyboard_protocol
+1ffffe00 g       .pstack	00000000 __process_stack_end__
+000029e0 g     F .text	00000114 kl2x_clock_init
+00000eb0  w    F .text	00000002 Vector34
+0000080c g     F .text	00000008 .hidden __aeabi_idivmod
+00003e50  w    F .text	00000002 hook_late_init
+000034e0 g     F .text	00000008 __early_init
+000085f8 g     O .rodata	0000003a fn_actions
+00005720 g     F .text	00000018 layer_xor
+20000cb8 g     O .bss	00000001 debug_config
+00000000 g       .rodata	00000000 __ram3_start__
+00000eb0  w    F .text	00000002 VectorA4
+000068c0 g     F .text	00000018 eeprom_read_word
+00000200 g       *ABS*	00000000 __process_stack_size__
+00003e60  w    F .text	00000028 hook_usb_suspend_loop
+000031d0 g     F .text	0000011c usb_lld_init_endpoint
+00005910 g     F .text	00000018 clear_keys
+00000eb0  w    F .text	00000002 Vector20
+000043c0 g     F .text	0000007c host_keyboard_send
+00005660 g     F .text	0000001c layer_move
+
+
